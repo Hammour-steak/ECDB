@@ -80,4 +80,4 @@ logger:
   print_freq: 100
   save_checkpoint_freq: !!float 2e4
 
-unet_pretrained: path_to_preatrained_goub_sr.ckpt
+unet_pretrained: path_to_preatrained_goub_sr.pth
