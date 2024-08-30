@@ -9,7 +9,7 @@
   <sup>1</sup>yuech5@mail2.sysu.edu.cn, Sun Yat-Sen University
   
 </div>
-<h3 align="center"> [<a href="">arXiv</a>] </h3>
+<h3 align="center"> [<a href="https://arxiv.org/abs/2408.16303">arXiv</a>] </h3>
 
 
 Official PyTorch Implementation of ECDB, which incorporates low-quality images as conditions into the diffusion bridge system, thereby enabling more comprehensive control over the predicted noise.
