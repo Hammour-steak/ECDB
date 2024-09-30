@@ -30,14 +30,6 @@ This code is developed with Python3, and we recommend python>=3.8 and PyTorch ==
     conda activate ECDB
     pip install -r requirements.txt
 
-# Test
-1. Prepare datasets.
-2. Download pretrained checkpoints [here](https://drive.google.com/drive/folders/16xnQypWmmR3lLJBe2uJQmR5WOnh4U7l-?usp=sharing) (We are currently only providing checkpoints for inpainting).
-3. Modify options, including dataroot_GT, dataroot_LQ and pretrain_model_G.
-4. `python test.py -opt=options/test.yml`
-
-The Test results will be saved in `\results`.
-
 # Train
 1. Prepare pretrained [checkpoint](https://drive.google.com/drive/folders/1rxHiZTxNSlvM9VSoRUY_rdoDp8DBbX8C?usp=drive_link) of GOUB.
 1. Prepare datasets.
@@ -45,6 +37,14 @@ The Test results will be saved in `\results`.
 3. `python train.py -opt=options/train.yml` for single GPU.<br> `python -m torch.distributed.launch --nproc_per_node=2 --master_port=1111 train.py -opt=options/train.yml --launcher pytorch` for multi GPUs. *Attention: see [Important Option Details](#important-option-details)*.
 
 The Training log will be saved in `\experiments`.
+
+# Test
+1. Prepare datasets.
+2. Prepare pretrained checkpoints from training.
+3. Modify options, including dataroot_GT, dataroot_LQ and pretrain_model_G.
+4. `python test.py -opt=options/test.yml`
+
+The Test results will be saved in `\results`.
 
 # Important Option Details
 * `dataroot_GT`: Ground Truth (High-Quality) data path.
